@@ -1,0 +1,121 @@
+on_actions = {
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = rarity_captured
+                    FROM = { tag = NLR }
+                    original_tag = TQS
+                    FROM.FROM = { state = 108 }
+				}
+				country_event = { id = twiquestria.12 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = rainbow_captured
+					has_global_flag = rarity_captured
+                    FROM = { tag = NLR }
+                    original_tag = TQS
+                    FROM.FROM = { state = 75 }
+				}
+				country_event = { id = twiquestria.11 }
+			}
+		}
+		effect = { #Twilight Takes Manehaten!
+			if = {
+				limit = {
+                    FROM = { tag = NLR }
+                    original_tag = TQS
+                    FROM.FROM = { state = 75 }
+				}
+				news_event = { id = news.2004 }
+				TQS = { country_event = { id = twiquestria.19 }}
+				NLR = { country_event = { id = twiquestria.21 }}
+			}
+		}
+		effect = { #Twilight Takes Canterlot!
+			if = {
+				limit = {
+                    FROM = { tag = EQS }
+                    original_tag = TQS
+                    FROM.FROM = { state = 3 }
+				}
+				news_event = { id = news.2005 }
+				TQS = { country_event = { id = twiquestria.20 }}
+				EQS = { country_event = { id = twiquestria.22 }}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = EQS }
+					original_tag = TQS
+					NLR = { exists = no }
+				}
+				news_event = { id = news.2000 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = NLR }
+					original_tag = TQS
+					EQS = { exists = no }
+				}
+				news_event = { id = news.2003 }
+			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { 
+					EQS = {
+						has_country_leader = { ruling_only = yes name = "Daybreaker" }
+						has_global_flag = SOL_wartime_change
+						has_government = fascism
+					}
+
+					NLR = { exists = yes }
+					
+					NOT = {
+						EQS = {
+							has_government = democratic
+							has_country_leader = { ruling_only = yes name = "Princess Celestia" }
+						}
+					}
+				}
+				country_event = { id = twiquestria.200 hours = 1 }
+			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { 
+					scs = {
+						has_country_leader = { ruling_only = yes name = "Braeburn" }
+						has_global_flag = twi_arives
+						has_government = democratic
+					}
+
+					NLR = { exists = yes }
+					EQS = { exists = yes }
+					TQS = { exists = yes }
+					
+					NOT = {
+						SCS = {
+							has_government = fascism
+						}
+					}
+				}
+				country_event = { id = twiquestria.23 days = 3 }
+			}
+		}
+	}
+}

@@ -1,0 +1,276 @@
+ideas = {
+
+	political_advisor = {
+		fancy_pants = {
+
+			allowed = {
+				original_tag = TQS
+			}
+
+			available = {
+				has_country_flag = twilight_takes_canterlot
+				has_government = democratic
+				NOT = { has_country_leader = { ruling_only = yes name = "Fancy Pants"} }
+			}
+
+			traits = { compassionate_gentleman }
+		}
+		filthy_rich = {
+
+			allowed = {
+				original_tag = TQS
+			}
+
+			available = {
+				has_government = democratic
+				NOT = { has_country_leader = { ruling_only = yes name = "Filthy Rich"} }
+			}
+
+			traits = { smooth_talking_charmer }
+		}
+		apple_jack = {
+
+			picture = Applejack
+			allowed = {
+				original_tag = TQS
+			}
+
+			available = {
+				has_government = democratic
+				NOT = { has_country_leader = { ruling_only = yes name = "Apple Jack"} }
+			}
+
+			traits = { element_of_honesty }
+		}
+	}
+	country = {
+		TQS_friends_in_arms = {
+
+			picture = harmonic_stagnation2
+			allowed = {
+					always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.25
+				army_speed_factor = 0.25
+				army_defence_factor = 0.25
+				attrition = -0.05
+			}
+		}
+	}
+	country = {
+		TQS_for_twilight = {
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				conscription = 0.10
+			}
+		}
+	}
+	country = {
+		TQS_civillian_protection_doctrine = {
+		
+			picture = idea_friendly_harmony
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				enemy_partisan_effect = -0.75
+				resistance_tick_auto = -2
+			}
+		}
+	}
+	country = {
+		tqs_civil_war_devistation = {
+
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			available = {
+				OR = {
+					original_tag = NLR
+					original_tag = EQS
+					original_tag = TQS
+					AND = {
+						eqs_has_civil_war = yes
+						any_enemy_country = {
+							is_eqs_civil_war_tag = yes
+						}
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -5.00
+			}
+		}
+	}
+		country = {
+		tqs_civil_war_devistation_2 = {
+
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -2.50
+			}
+		}
+	}
+	country = {
+		tqs_civil_war_devistation_3 = {
+
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.75
+			}
+		}
+	}
+	country = {
+		tqs_civil_war = {
+
+			picture = tqs_civil_war
+			allowed = {
+				always = no
+			}
+			available = {
+				OR = {
+					original_tag = NLR
+					original_tag = EQS
+					original_tag = TQS
+					AND = {
+						eqs_has_civil_war = yes
+						any_enemy_country = {
+							is_eqs_civil_war_tag = yes
+						}
+					}
+				}
+			}
+			removal_cost = -1
+			rule = {
+				can_join_factions = no
+			}
+			modifier = {
+				training_time_army_factor = 0.1
+				army_morale_factor = -0.1
+				industrial_capacity_factory = -0.25
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.3
+				ai_get_ally_desire_factor = -2000
+				ai_join_ally_desire_factor = -2000
+				ai_call_ally_desire_factor = -2000
+				ai_focus_aggressive_factor = 0.3
+			}
+		}
+	}
+	country = {
+		nation_in_mourning = {
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = 10.00
+				army_morale_factor = -0.90
+				industrial_capacity_factory = -0.75
+				production_factory_max_efficiency_factor = -0.75
+				production_speed_buildings_factor = -0.75
+				stability_factor = -0.3
+				war_support_factor = -1.0
+				mobilization_speed = -0.5
+				surrender_limit = -0.75
+				political_power_gain = -1.5
+				foreign_subversive_activites = 1.00
+				drift_defence_factor = -1.00
+				enemy_justify_war_goal_time = -0.5
+				conscription_factor = -1.00
+				non_core_manpower = -0.5
+				consumer_goods_factor = 0.75
+				local_resources_factor = -0.75
+				industry_repair_factor = -0.5
+				research_time_factor = 10.00
+				democratic_drift = -0.05
+			}
+		}
+	}
+	country = {
+		unstable_rule = {
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.25
+				production_factory_max_efficiency_factor = -0.25
+				production_speed_buildings_factor = -0.25
+				stability_factor = -0.1
+				mobilization_speed = -0.25
+				surrender_limit = -0.1
+				political_power_gain = -0.25
+			}
+		}
+	}
+	country = {
+		facsist_resistance = {
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				mobilization_speed = -0.05
+				political_power_gain = -0.05
+				fascism_drift = 0.05
+			}
+		}
+	}
+	country = {
+		organized_training_methods = {
+		
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.07
+			}
+		}
+	}
+}

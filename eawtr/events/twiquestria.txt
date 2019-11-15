@@ -1,0 +1,1045 @@
+﻿
+add_namespace = twiquestria
+
+country_event = { #spawns twilight’s nation
+    id = twiquestria.1
+    title = twiquestria.1.t
+    desc = twiquestria.1.d
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+  
+    option = {
+		name = twiquestria.1.a
+		TQS = {
+			transfer_state = 1
+			transfer_state = 2
+			transfer_state = 5
+			transfer_state = 68
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+				producer = EQS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 160
+				producer = EQS
+			}
+			set_popularities = {
+				democratic = 25
+				neutrality = 25
+				fascism = 25
+				communism = 25
+			}
+		}
+		set_global_flag = twi_arives
+		EQS = { country_event = { id = twiquestria.2 }}
+		NLR = { country_event = { id = twiquestria.2 }}
+	}
+}
+
+country_event = { #swap to twilight’s nation
+    id = twiquestria.2
+    title = twiquestria.2.t
+    desc = twiquestria.2.d
+
+	is_triggered_only = yes
+	
+    option = { #don’t swap
+        name = twiquestria.2.a
+			hidden_effect = {
+				NLR = { 
+					declare_war_on = {
+						target = TQS
+						type = annex_everything
+					}
+				}	
+				EQS = { 
+					declare_war_on = {
+						target = TQS
+						type = annex_everything
+					}
+				}
+			}
+			
+    }
+
+    option = { #swap
+        name = twiquestria.2.b
+		ai_chance = { factor = 0 }
+			TQS = {
+				change_tag_from = ROOT
+			}
+		hidden_effect = {
+			NLR = { 
+				declare_war_on = {
+					target = TQS
+					type = civil_war
+				}
+			}	
+			EQS = { 
+				declare_war_on = {
+					target = TQS
+					type = civil_war
+				}
+			}
+			TQS = { 
+				add_ideas = unstable_rule
+				add_ideas = proper_science_base
+				add_ideas = modern_society
+				add_ideas = tqs_civil_war_devistation
+				add_ideas = tqs_civil_war
+				load_oob = TQS_ponyville
+			}
+			EQS = { 
+				inherit_technology = TQS
+				add_ideas = tqs_civil_war_devistation
+				remove_ideas = eqs_civil_war
+				add_ideas = tqs_civil_war
+				}
+			NLR = { 
+			add_ideas = tqs_civil_war_devistation 
+			remove_ideas = eqs_civil_war
+			add_ideas = tqs_civil_war
+			}
+		}
+	}
+}
+country_event = { #Twilight's Speach
+	id = twiquestria.3
+	title = twiquestria.3.t
+	desc = twiquestria.3.d
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = twiquestria.3.a
+		add_stability = 0.25
+		add_war_support = 0.25
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.25
+		}
+		hidden_effect = {
+			TQS = {
+				country_event = { 
+				id = twiquestria.4 
+				Days = 4
+				Random = 72
+				}
+				country_event = { 
+				id = twiquestria.5 
+				Days = 8
+				Random = 72
+				}
+				add_ideas = TQS_friends_in_arms
+			}
+		}	
+	}
+}
+country_event = { #west-central equestria sides with Twilight
+	id = twiquestria.4
+	title = twiquestria.4.t
+	desc = twiquestria.4.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = twiquestria.4.a
+			TQS = {
+				transfer_state = 38
+				transfer_state = 41
+				transfer_state = 87
+				transfer_state = 94
+				transfer_state = 95
+				transfer_state = 99
+				transfer_state = 101
+				transfer_state = 114
+				transfer_state = 117
+				transfer_state = 118
+				transfer_state = 119
+				transfer_state = 121
+				transfer_state = 123
+				
+			}
+			hidden_effect = {
+				EQS = {
+					country_event = {
+						id = twiquestria.6
+					}
+				}
+				TQS = {
+					add_equipment_to_stockpile = {
+					type = artillery_equipment_0
+					amount = 500
+					producer = EQS
+					}
+					add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 800
+					producer = EQS
+					}
+					add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 100
+					producer = EQS
+					}
+					add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 500
+					producer = EQS
+					}
+				}
+			load_oob = TQS_west-central
+			add_state_core = 38
+			add_state_core = 41
+			add_state_core = 87
+			add_state_core = 94
+			add_state_core = 95
+			add_state_core = 99
+			add_state_core = 101
+			add_state_core = 114
+			add_state_core = 117
+			add_state_core = 118
+			add_state_core = 119
+			add_state_core = 121
+			add_state_core = 123
+			}
+	}
+}
+country_event = { #east-central equestria sides with Twilight
+	id = twiquestria.5
+	title = twiquestria.5.t
+	desc = twiquestria.5.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = twiquestria.5.a
+			TQS = {
+				transfer_state = 29
+				transfer_state = 63
+				transfer_state = 65
+				transfer_state = 84
+				transfer_state = 97
+				transfer_state = 106
+				transfer_state = 109
+				transfer_state = 111
+				transfer_state = 112
+				transfer_state = 113
+				transfer_state = 115
+				transfer_state = 116
+				transfer_state = 120
+				transfer_state = 122
+				transfer_state = 327
+			}
+			hidden_effect = {
+				NLR = {
+					country_event = { id = twiquestria.7 }
+				}
+				TQS = {
+					country_event = { 
+						id = twiquestria.8 
+						days = 2
+						random = 24					
+					}
+					load_oob = TQS_east-central
+					add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 1200
+					producer = EQS
+					}
+					add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 180
+					producer = EQS
+					}
+					add_equipment_to_stockpile = {
+					type = artillery_equipment_0
+					amount = 300
+					producer = EQS
+					}
+				}
+			}
+	}
+}
+country_event = {
+	id = twiquestria.6
+	title = twiquestria.6.t
+	desc = twiquestria.6.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = { name = twiquestria.6.a }
+}
+country_event = {
+	id = twiquestria.7
+	title = twiquestria.7.t
+	desc = twiquestria.7.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = { name = twiquestria.7.a }
+}
+country_event = { #Fillydelphia joins the fight
+	id = twiquestria.8
+	title = twiquestria.8.t
+	desc = twiquestria.8.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.8.a
+		TQS = {
+			transfer_state = 12
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = TQS
+				}
+				add_core_of = TQS
+			}
+			load_oob = TQS_fillydelphia
+			TQS = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 12000
+				producer = EQS
+				}
+				add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 1800
+				producer = EQS
+				}
+				add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 200
+				producer = EQS
+				}
+			}
+		}
+	}
+}
+country_event = { #Questions on Conscription
+	id = twiquestria.9
+	title = twiquestria.9.t
+	desc = twiquestria.9.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.9.a
+		create_field_marshal = {
+			name = "Twilight Sparkle"
+			portrait_path = "gfx/leaders/TQS/Twilight.tga"
+			traits = { avid_learner organisational_leader }
+			skill = 1
+			id = 12345
+			attack_skill = 0
+			defense_skill = 0
+			planning_skill = 6
+			logistics_skill = 3
+			female = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = twiquestria.10
+				days = 7
+				random = 72
+			}
+			set_cosmetic_tag = TQS_DEM1
+		}
+	}
+	option = {
+		name = twiquestria.9.b
+		add_ideas = service_by_requirement
+		add_political_power = -100
+	}
+}
+country_event = { #reverse phsycolagy
+	id = twiquestria.10
+	title = twiquestria.10.t
+	desc = twiquestria.10.d
+	picture = GFX_event_hearthswarming
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.10.a		
+		add_ideas = TQS_for_twilight
+	}
+}
+country_event = { #Rarity and Dash Rescued
+	id = twiquestria.11
+	title = twiquestria.11.t
+	desc = twiquestria.11.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.11.a
+		hidden_effect = {
+			clr_global_flag = rainbow_captured
+			clr_global_flag = rarity_captured
+			set_global_flag = rarity_rescued
+		}
+	}
+}
+country_event = { #Rarity Rescue Mission
+	id = twiquestria.12
+	title = twiquestria.12.t
+	desc = twiquestria.12.d
+	picture = gfx_report_event_military_planning
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.12.a
+		hidden_effect = {
+			random_list = {
+				90 = { 
+					country_event = {
+						id = twiquestria.13
+						days = 3
+					}
+				}
+				10 = { 
+					country_event = {
+						id = twiquestria.14
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #Rarity Rescued
+	id = twiquestria.13
+	title = twiquestria.13.t
+	desc = twiquestria.13.d
+	picture = gfx_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.13.a
+		hidden_effect = {
+			clr_global_flag = rarity_captured
+			set_global_flag = rarity_rescued
+		}
+	}
+}
+country_event = { #Rescue Failed
+	id = twiquestria.14
+	title = twiquestria.14.t
+	desc = twiquestria.14.d
+	picture = gfx_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.14.a
+		hidden_effect = { set_global_flag = rainbow_captured }
+	}
+}
+country_event = { #Won Civil War Daybreaeker Capitulated last time to use harmony
+	id = twiquestria.15
+	title = twiquestria.15.t
+	desc = twiquestria.15.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.15.a
+		hidden_effect = {
+			country_event = { id = twiquestria.17 }
+		}
+	}
+}
+country_event = { #Won Civil War Nightmare Capitulated last time to use harmony
+	id = twiquestria.16
+	title = twiquestria.16.t
+	desc = twiquestria.16.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.16.a
+		hidden_effect = {
+			country_event = { id = twiquestria.17 days = 1 }
+		}
+	}
+}
+country_event = { #Daybreaeker and Nightmare die Twilight gets all the magic
+	id = twiquestria.17
+	title = twiquestria.17.t
+	desc = twiquestria.17.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.17.a
+		hidden_effect = {
+			country_event = { 
+				id = twiquestria.18
+				days = 7
+			}
+		}
+	}
+}
+country_event = { #Funeral
+	id = twiquestria.18
+	title = twiquestria.18.t
+	desc = twiquestria.18.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twiquestria.18.a
+		TQS = { 
+			add_timed_idea = { 
+				idea = nation_in_mourning 
+				days =  30
+			}
+		}
+		hidden_effect = {
+			news_event = { id = news.2002 }
+		}
+	}
+}
+country_event = { #Twilight Takes Manehaten
+	id = twiquestria.19
+	title = twiquestria.19.t
+	desc =twiquestria.19.d
+	picture = gfx_news_manehattan_explosion
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.19.a
+	}	
+}
+country_event = { #Twilight takes canterlot
+	id = twiquestria.20
+	title = twiquestria.20.t
+	desc = twiquestria.20.d
+	picture = gfx_news_manehattan_explosion
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.20.a
+		set_country_flag = twilight_takes_canterlot
+	}
+}
+country_event = { #Twilight Takes Manehaten
+	id = twiquestria.21
+	title = twiquestria.21.t
+	desc =twiquestria.21.d
+	picture = gfx_news_manehattan_explosion
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.21.a
+	}
+}
+country_event = { #Twilight takes canterlot
+	id = twiquestria.22
+	title = twiquestria.22.t
+	desc = twiquestria.22.d
+	picture = gfx_news_manehattan_explosion
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.22.a
+	}
+}
+
+country_event = { #Twilight Sends AJ
+	id = twiquestria.23
+	title = twiquestria.23.t
+	desc = twiquestria.23.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.23.a
+		hidden_effect = {
+			SCS ={
+				country_event = { id = twiquestria.24 }
+			}
+		}
+	}
+}
+country_event = { #Breaburn Decides
+	id = twiquestria.24
+	title = twiquestria.24.t
+	desc = twiquestria.24.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Join Twilight
+		name = twiquestria.24.a
+		hidden_effect = {
+			TQS ={
+				country_event = { id = twiquestria.25 }
+			}
+		}
+	}
+	option = { #Twilight's Pupet
+		name = twiquestria.24.b
+		hidden_effect = {
+			TQS ={
+				country_event = { id = twiquestria.26 }
+			}
+		}
+	}
+	option = { #Turn AJ away.
+		name = twiquestria.24.c
+		hidden_effect = {
+			TQS ={
+				country_event = { id = twiquestria.27 }
+			}
+		}
+	}
+}
+country_event = { #The South Joins Us
+	id = twiquestria.25
+	title = twiquestria.25.t
+	desc = twiquestria.25.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twiquestria.25.a
+		annex_country = {
+			target = SCS
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = { #spawns twilight’s nation
+    id = twiquestria.101
+    title = twiquestria.101.t
+    desc = twiquestria.101.d
+    picture = GFX_event_hearthswarming
+
+	hidden = yes
+	fire_only_once = yes
+  
+trigger = {
+		tag = NLR
+		has_global_flag = SOL_wartime_change
+		EQS = { exists = yes }
+		EQS = { is_ai = no }
+		NLR = { is_ai = yes }
+}
+
+mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = twiquestria.101.a
+		TQS = {
+			transfer_state = 1
+			transfer_state = 2
+			transfer_state = 5
+			transfer_state = 68
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+				producer = EQS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 160
+				producer = EQS
+			}
+		}
+		set_global_flag = twi_arives
+		EQS = { country_event = { id = twiquestria.2 }}
+		TQS = {
+			load_oob = TQS_ponyville
+			add_state_core = 1
+			add_state_core = 2
+			add_state_core = 5
+			add_state_core = 68
+		}
+	}
+}
+country_event = { #spawns twilight’s nation
+    id = twiquestria.102
+    title = twiquestria.102.t
+    desc = twiquestria.102.d
+    picture = GFX_event_hearthswarming
+
+	hidden = yes
+	fire_only_once = yes
+  
+trigger = {
+		tag = NLR
+		has_global_flag = SOL_wartime_change
+		EQS = { exists = yes }
+		EQS = { is_ai = yes }
+		NLR = { is_ai = no }
+}
+
+mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = twiquestria.102.a
+		TQS = {
+			transfer_state = 1
+			transfer_state = 2
+			transfer_state = 5
+			transfer_state = 68
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+				producer = EQS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 160
+				producer = EQS
+			}
+		}
+		set_global_flag = twi_arives
+		NLR = { country_event = { id = twiquestria.2 }}
+		TQS = {
+			load_oob = TQS_ponyville
+			add_state_core = 1
+			add_state_core = 2
+			add_state_core = 5
+			add_state_core = 68
+		}
+	}
+}
+
+##########################Pre-Civ-War Story Events####################################
+
+country_event = { #Twilight gets out of Canterlot Castle 1
+	id = twiquestria.200
+	title = twiquestria.200.t
+	desc = twiquestria.200.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Captured Teleport out
+		name = twiquestria.200.a
+		hidden_effect = {
+			country_event = { id = twiquestria.203 }
+		}
+	}
+	option = {#Sneeky Wait for Daybreker to leave
+		name = twiquestria.200.b
+		hidden_effect = {
+			country_event = { id = twiquestria.202 }
+		}
+	}
+	option = {#Brute force Make a run for it (Fight Daybreaker)
+		name = twiquestria.200.c
+		hidden_effect = {
+			country_event = { id = twiquestria.201 }
+		}
+	}
+}
+
+country_event = { #Twilight gets out of Canterlot Castle Brute force
+	id = twiquestria.201
+	title = twiquestria.201.t
+	desc = twiquestria.201.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured Atempt hoof sweep
+		name = twiquestria.201.a
+		hidden_effect = {
+			country_event = { id = twiquestria.205 }
+		}
+	}
+	option = {#Captured fly high
+		name = twiquestria.201.b
+		hidden_effect = { 
+			country_event = { id = twiquestria.206 }
+		}
+	}
+	option = {#Escape Gravity spell
+		name = twiquestria.201.c
+		hidden_effect = {
+			country_event = { id = twiquestria.204 }
+		}
+	}	
+}
+
+country_event = { #Twilight gets out of Canterlot Castle Sneeky
+	id = twiquestria.202
+	title = twiquestria.202.t
+	desc = twiquestria.202.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#To Library
+		name = twiquestria.202.a
+		hidden_effect = {
+			country_event = { id = twiquestria.208 }
+		}
+	}
+	option = {#To Dungeon
+		name = twiquestria.202.b
+		hidden_effect = {
+			country_event = { id = twiquestria.207}
+		}
+	}
+	option = {#To Entrance
+		name = twiquestria.202.c
+		hidden_effect = {
+			country_event = { id = twiquestria.209 }
+		}
+	}
+}
+
+country_event = { #Twilight gets out of Canterlot Castle Captured
+	id = twiquestria.203
+	title = twiquestria.203.t
+	desc = twiquestria.203.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.203.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+
+country_event = { #Twilight escapes the Streets of Canterlot Brute force
+	id = twiquestria.204
+	title = twiquestria.204.t
+	desc = twiquestria.204.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Brake through it
+		name = twiquestria.204.a
+		hidden_effect = {
+			country_event = { id = twiquestria.211 }
+		}
+	}
+	option = {#Captured
+		name = twiquestria.204.b
+		hidden_effect = {
+			country_event = { id = twiquestria.210 }
+		}
+	}
+}
+country_event = { #Twilight gets Captured hoof sweep
+	id = twiquestria.205
+	title = twiquestria.205.t
+	desc = twiquestria.205.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.205.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight gets Captured fly high
+	id = twiquestria.206
+	title = twiquestria.206.t
+	desc = twiquestria.206.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.206.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight goes toward the dungeon
+	id = twiquestria.207
+	title = twiquestria.207.t
+	desc = twiquestria.207.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Keep cloak
+		name = twiquestria.207.a
+		hidden_effect = {
+			country_event = { id = twiquestria.212 }
+		}
+	}
+	option = {#Drop cloak
+		name = twiquestria.207.b
+		hidden_effect = {
+			country_event = { id = twiquestria.213 }
+		}
+	}
+}
+country_event = { #Twilight captered in the Library
+	id = twiquestria.208
+	title = twiquestria.208.t
+	desc = twiquestria.208.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.208.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight is captered at the entrance
+	id = twiquestria.209
+	title = twiquestria.209.t
+	desc = twiquestria.209.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.209.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight Breaks Through
+	id = twiquestria.210
+	title = twiquestria.210.t
+	desc = twiquestria.210.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Escaped Canterlot
+		name = twiquestria.210.a
+		hidden_effect = {
+			country_event = { id = twiquestria.214 }
+		}
+	}
+}
+country_event = { #Twilight teleports past it
+	id = twiquestria.211
+	title = twiquestria.211.t
+	desc = twiquestria.211.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.211.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight keeps the cloak
+	id = twiquestria.212
+	title = twiquestria.212.t
+	desc = twiquestria.212.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Find a secret pasage and escapes
+		name = twiquestria.212.a
+		hidden_effect = {
+			country_event = { id = twiquestria.215 }
+		}
+	}
+}
+country_event = { #Twilight Drops the cloack
+	id = twiquestria.213
+	title = twiquestria.213.t
+	desc = twiquestria.213.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Captured
+		name = twiquestria.213.a
+		hidden_effect = {
+			set_country_flag = SOL_has_twilight
+		}
+	}
+}
+country_event = { #Twilight busts out of Canterlot!
+	id = twiquestria.214
+	title = twiquestria.214.t
+	desc = twiquestria.214.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Flying Away from canterlot
+		name = twiquestria.214.a
+		hidden_effect = {
+			country_event = { id = twiquestria.216 }
+		}
+	}
+}
+country_event = { #Twilight makes a sneeky escape!
+	id = twiquestria.215
+	title = twiquestria.215.t
+	desc = twiquestria.215.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Sneek away to ponyville.
+		name = twiquestria.215.a
+		hidden_effect = {
+			country_event = { id = twiquestria.216 }
+		}
+	}
+}
+country_event = { #Twilight Arives in ponyville
+	id = twiquestria.216
+	title = twiquestria.216.t
+	desc = twiquestria.216.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#Startss oragnizing revolution.
+		name = twiquestria.216.a
+		hidden_effect = {
+			country_event = { id = twiquestria.1 days = 3 }
+		}
+	}
+}

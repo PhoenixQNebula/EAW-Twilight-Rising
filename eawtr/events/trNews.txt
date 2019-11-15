@@ -1,0 +1,143 @@
+﻿
+add_namespace = news
+
+	news_event = {
+		id = news.2000
+		title = news.2000.t
+		desc = news.2000.d
+		picture = gfx_news_canterlot
+		major = yes
+		is_triggered_only = yes
+		
+		option = {
+		name = news.2000.a
+			trigger = { TAG = TQS }
+			hidden_effect = { 
+				remove_ideas = tqs_civil_war_devistation
+				country_event = {
+					id = twiquestria.15
+					days = 3
+				}
+			}
+		}
+	
+		option = {
+			name = news.2000.b
+			trigger = { TAG = CHN }
+		}
+
+		option = {
+			name = news.2000.c
+			trigger = { 
+				NOT = { 
+					TAG = CHN 
+					TAG = TQS
+				} 
+			}
+		}
+	}
+	news_event = {
+		id = news.2003
+		title = news.2003.t
+		desc = news.2003.d
+		picture = gfx_news_canterlot
+		major = yes
+		is_triggered_only = yes
+		
+		option = {
+		name = news.2003.a
+			trigger = { TAG = TQS }
+			hidden_effect = { 
+				country_event = {
+					id = twiquestria.16
+					days = 3
+				}
+			}
+		}
+	
+		option = {
+			name = news.2003.b
+			trigger = { TAG = CHN }
+		}
+
+		option = {
+			name = news.2003.c
+			trigger = { 
+				NOT = { 
+					TAG = CHN 
+					TAG = TQS
+				} 
+			}
+		}
+	}
+	news_event = {
+		id = news.2002
+		title = news.2002.t
+		desc = news.2002.d
+		picture = gfx_news_canterlot
+		major = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = news.2002.a
+			trigger = { TAG = CHN }
+		}
+
+		option = {
+			name = news.2002.b
+			trigger = { 
+				NOT = { 
+					TAG = CHN 
+					TAG = TQS
+				} 
+			}
+		}
+	}
+	news_event = {
+		id = news.2004
+		title = news.2004.t
+		desc = news.2004.d
+		picture = gfx_news_manehattan_explosion
+		major = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = news.2004.a
+			trigger = { TAG = EQS }
+		}
+	
+		option = {
+			name = news.2004.b
+			trigger = { 
+				NOT = {
+					TAG = EQS 
+					TAG = TQS
+					TAG = NLR
+				}
+			}
+		}
+	}
+	news_event = {
+		id = news.2005
+		title = news.2005.t
+		desc = news.2005.d
+		picture = gfx_news_manehattan_explosion
+		major = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = news.2005.a
+			trigger = { TAG = NLR }
+		}
+	
+		option = {
+			name = news.2005.b
+			trigger = { 
+				NOT = {
+					TAG = EQS 
+					TAG = TQS
+					TAG = NLR
+				}
+			}
+		}
+	}

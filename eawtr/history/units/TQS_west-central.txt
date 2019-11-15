@@ -1,0 +1,160 @@
+﻿division_template = {
+	name = "Makeshift Battalion"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		artillery_brigade = { x = 0 y = 1 }
+		pegasi = { x = 1 y = 0 }
+	}
+	
+	support = {
+		military_police = { x = 0 y = 0 }
+		unicorn_company = { x = 0 y = 1}
+	}
+}
+
+division_template = {
+	name = "Artillery Battery"
+	
+	regiments = {
+		artillery_brigade = { x = 0 y = 0 }
+		artillery_brigade = { x = 0 y = 1 }
+		artillery_brigade = { x = 1 y = 0 }
+	}
+	
+	support = {
+		Artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Mobile Militia"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	
+	support = {
+		military_police = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Earth Pony Militia"
+		location = 9400
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 9400
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 9294
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Battalion"
+		location = 11511
+		division_template = "Makeshift Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Artillery Battery"
+		location = 11511
+		division_template = "Artillery Battery"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Artillery Battery"
+		location = 11511
+		division_template = "Artillery Battery"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }	
+	division = {
+		name = "Artillery Battery"
+		location = 11511
+		division_template = "Artillery Battery"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Mobile Militia"
+		location = 11511
+		division_template = "Mobile Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Mobile Militia"
+		location = 11511
+		division_template = "Mobile Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Mobile Militia"
+		location = 11511
+		division_template = "Mobile Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Mobile Militia"
+		location = 11511
+		division_template = "Mobile Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		

@@ -1,0 +1,14 @@
+spriteTypes = {
+
+
+	spriteType = {
+		name = "GFX_idea_apple_jack"
+		texturefile = "gfx/interface/ideas/Applejack.tga"
+	}
+
+	spriteType = {
+	name = "GFX_idea_tqs_civil_war"
+	texturefile = "gfx/interface/ideas/tqs_civil_war.dds"
+	}
+	
+}

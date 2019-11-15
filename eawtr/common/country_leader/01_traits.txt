@@ -1,0 +1,27 @@
+leader_traits = {
+
+	inexperienced_leader = {
+		random = no
+
+		political_power_gain = -0.75
+		conscription = -0.05
+		non_core_manpower = -0.05
+		stability_factor = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	element_of_honesty = {
+		random = no
+		
+		stability_factor = 0.10
+		drift_defence_factor = 0.10
+		production_speed_buildings_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

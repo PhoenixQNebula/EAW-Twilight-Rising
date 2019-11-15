@@ -1,0 +1,218 @@
+focus_tree = { 
+id = twiquestria_focus
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = TQS 
+} 
+} 
+#Focus for A Kind Hoof
+focus = { 
+id = TQS_akindhoof
+icon = GFX_focus_generic_concessions
+x = 15
+y = 1
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_twilightsspeech } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+swap_ideas = {
+	remove_idea = unstable_rule
+	add_idea = facsist_resistance
+}
+ } 
+
+ } 
+
+#Focus for End the Mayhem
+focus = { 
+id = TQS_endthemayhem
+icon = GFX_goal_demand_sudetenland
+x = 12
+y = 2
+cost = 12
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_dealwiththechaos } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+swap_ideas = {
+	remove_idea = tqs_civil_war_devistation_2
+	add_idea = tqs_civil_war_devistation_3
+}
+ } 
+
+ } 
+
+#Focus for Deal with the Chaos
+focus = { 
+id = TQS_dealwiththechaos
+icon = GFX_goal_generic_political_pressure
+x = 12
+y = 1
+cost = 12
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_twilightsspeech } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+swap_ideas = {
+	remove_idea = tqs_civil_war_devistation
+	add_idea = tqs_civil_war_devistation_2
+}
+ } 
+
+ } 
+
+#Focus for The Civil War Ends
+focus = { 
+id = TQS_thecivilwarends
+icon = GFX_goal_generic_demand_territory
+x = 12
+y = 4
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_placatetherebals } 
+prerequisite = { focus = TQS_reorganizetrainingmethods } 
+prerequisite = { focus = TQS_endthemayhem } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+TQS = { has_civil_war= no }
+ } 
+
+ } 
+
+#Focus for Question on Conscription
+focus = { 
+id = TQS_questiononconscription
+icon = GFX_focus_generic_little_entente
+x = 9
+y = 1
+cost = 7
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_twilightsspeech } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+country_event = {
+id = twiquestria.9
+}
+ } 
+
+ } 
+
+#Focus for Twilight's Speech
+focus = { 
+id = TQS_twilightsspeech
+icon = GFX_goal_generic_national_unity
+x = 12
+y = 0
+cost = 1
+available_if_capitulated = yes 
+completion_reward = { 
+country_event {
+days = 1
+id = twiquestria.3
+}
+ } 
+
+ } 
+
+#Focus for Establishing Rule
+focus = { 
+id = TQS_establishingrule
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_akindhoof } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+add_political_power = 150
+ } 
+
+ } 
+
+#Focus for Reorganize Training Methods
+focus = { 
+id = TQS_reorganizetrainingmethods
+icon = GFX_focus_RAJ_lions_of_the_great_war
+x = 11
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_civilianprotectiondoctrine } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+add_ideas = organized_training_methods
+ } 
+
+ } 
+
+#Focus for Civilian Protection Doctrine
+focus = { 
+id = TQS_civilianprotectiondoctrine
+icon = GFX_goal_generic_small_arms
+x = 10
+y = 2
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_questiononconscription } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+add_ideas = TQS_civillian_protection_doctrine
+ } 
+
+ } 
+
+#Focus for Placate The Rebals
+focus = { 
+id = TQS_placatetherebals
+icon = GFX_focus_generic_anti_fascist_diplomacy
+x = 13
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = TQS_establishingrule } 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+completion_reward = { 
+remove_ideas = facsist_resistance
+ } 
+
+ } 
+
+#End of focuses 
+ }

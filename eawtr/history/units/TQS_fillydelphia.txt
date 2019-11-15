@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Makeshift Tank Battalion"
+	
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 0 y = 4 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 1 y = 3 }
+	}
+	
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+}
+
+
+
+units = {
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }	
+	division = {
+		name = "Earth Pony Militia"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Tank Battalion"
+		location = 950
+		division_template = "Earth Pony Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Makeshift Tank Battalion"
+		location = 950
+		division_template = "Makeshift Tank Battalion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5 }
+	}

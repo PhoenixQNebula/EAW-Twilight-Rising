@@ -1,0 +1,40 @@
+﻿l_english:
+
+    #COUNTRY NAMES
+    TQS_neutrality:0 "Three Tribes"
+    TQS_neutrality_DEF:0 "The Three Tribes"
+    TQS_fascism:0 "Equestrian State"
+    TQS_fascism_DEF:0 "The Equestrian State"
+    TQS_communism:0 "Socialist Republic of Equestria"
+    TQS_communism_DEF:0 "The Socialist Republic of Equestria"
+    TQS_harmony:0 "Equestria"
+    TQS_harmony:0 "Equestria"
+    TQS_democratic:0 "Twilight's Revolt"
+    TQS_democratic_DEF:0 "Twilight's Revolt"
+    TQS_DEM1:0 "Twilight's Revolt"
+    TQS_DEM_DEF:0 "Twilight's Revolt"
+    TQS_fascism_ADJ:0 "Equestrian"
+    TQS_harmony_ADJ:0 "Equestrian"
+    TQS_democratic_ADJ:0 "Equestrian"
+    TQS_neutrality_ADJ:0 "Equestrian"
+    TQS_communism_ADJ:0 "Equestrian"
+    
+    #PARTY NAMES
+    TQS_neutrality_party:0 "TTS"
+    TQS_neutrality_party_long:0 "Three Tribes Supporters"
+    TQS_communism_party:0 "PCP"
+    TQS_communism_party_long:0 "Ponies Communist Party"
+    TQS_democratic_party:0 "Alicorn Rule"
+    
+    #LEADER DESCRIPTIONS/NAMES
+    
+    POLITICS_TWILIGHT_DESC:0 "The second youngest alicorn in the known world, Twilight Sparkle was born a unicron and later ascended to become an immortal alicorn as reward for her great deads to Equestria and the world. Unfortunatly she has come into power by factors beyond her control and is now responsible for putting a nation back together that is tearing itself apart at the seams. She is wofully under experinced and has lost both her mentors, will she be able to reunite her ponies or is she doomed to fail like her predosecors?"
+    apple_jack:0 "AppleJack"
+    
+    #LEADER TRAITS
+    
+    inexperienced_leader:0 "Inexperienced Leader"
+    avid_learner:0 "Avid Learner"
+    avid_learner_desc:0 "This indevidual loves to learn and can learn almost anything."
+    element_of_honesty:0 "Element of Honesty"
+    element_of_honesty_desc:0 "Honest to a fault"

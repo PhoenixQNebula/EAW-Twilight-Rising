@@ -1,0 +1,53 @@
+leader_traits = {
+
+	avid_learner = {
+		type = all
+		trait_type = personality_trait
+
+		non_shared_modifier = {
+			experience_gain_factor = 0.50
+		}
+	}
+	godess_of_magic = {
+		type = all
+		trait_type = personality_trait
+		
+		field_marshal_modifier = {
+			max_army_group_size = 10
+		}
+		non_shared_modifier = {
+			experience_gain_factor = 100.00
+		}
+		modifier = {
+			experience_gain_army = 0.5
+			experience_gain_army_factor = 0.6
+			planning_speed = 0.5
+			max_planning = 1.0
+			army_org_factor = 0.5
+			army_org = 10
+			army_morale_factor = 0.5
+			decryption_factor = 0.99
+			encryption_factor = 0.99
+			defence = 0.5
+			offence = 0.5
+			army_defence_factor = 0.5
+			army_attack_factor = 0.5
+			army_speed_factor = 0.75
+			land_reinforce_rate = 0.75
+			attrition = -0.75
+			heat_attrition_factor = -1.0
+			winter_attrition_factor = -1.0
+			acclimatization_cold_climate_gain_factor = 0.5
+			acclimatization_hot_climate_gain_factor = 0.5
+			terrain_penalty_reduction = 0.90
+			max_dig_in = 1000
+			dig_in_speed = 10
+			dig_in_speed_factor = 1.75
+			supply_consumption_factor = 1.25
+			out_of_supply_factor = 0.5
+			no_supply_grace = 0
+			enemy_partisan_effect = -1.0
+		}
+		
+	}
+}
