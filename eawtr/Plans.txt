@@ -2,7 +2,7 @@
 
 #1. Troop and territory sapwning events.
 2. Rarity rescue event chain.
-3. Expand Civilwar focus tree.
+3. Civilwar focus tree.
 4. Civilwar national spirits.
 5. Final Push Event.
 6. Civilwar ends event chain.

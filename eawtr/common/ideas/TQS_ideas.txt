@@ -273,4 +273,18 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		no_war_on_us = {
+
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				enemy_justify_war_goal_time	= 100.0
+			}
+		}
+	}
 }

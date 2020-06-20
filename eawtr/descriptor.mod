@@ -1,5 +1,4 @@
 ﻿name="EAW: Twilight Rising"
-path ="mod/eawtr"
 dependencies={
 	"Equestria at War"
 }

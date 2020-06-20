@@ -118,4 +118,17 @@ on_actions = {
 			}
 		}
 	}
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					EQS = { exists = no }
+					original_tag = TQS
+					NLR = { exists = no }
+				}
+				set_global_flag	= twi_civil_war_ended
+				country_event = { id = twiquestria.26 }
+			}
+		}
+	}
 }
