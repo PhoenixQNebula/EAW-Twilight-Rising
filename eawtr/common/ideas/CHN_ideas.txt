@@ -12,7 +12,11 @@ country = {
 			modifier = {#cant declare war on twiquestria
 				set_truce = {target = TQS}
 				days = 90
+				take_state = {
+					PREV = EQS
+					ROOT = CHN
+					take_states_limit = 0
+				}
 			}
 		}
 	}
-`
