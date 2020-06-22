@@ -737,9 +737,9 @@ mean_time_to_happen = { days = 1 }
 }
 
 country_event = { #Removes the idea of anti war for twiquestria for changelings
-	id = twiquestria.26
-	title = twiquestria.26.t
-	desc = twiquestria.26.d
+	id = twiquestria.260
+	title = twiquestria.260.t
+	desc = twiquestria.260.d
 	
 	is_triggered_only = yes
 	fire_only_once = yes

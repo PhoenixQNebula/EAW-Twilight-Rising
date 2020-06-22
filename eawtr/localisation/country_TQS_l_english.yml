@@ -45,6 +45,7 @@ TQS_placatetherebals_desc:0 "Many would rather crush a rebellion ruthlessly and 
  facsist_resistance:0 "Facsist Resistance"
  facsist_resistance_desc:0 "There is an underground facsits movment in this country"
  organized_training_methods:0 "Organized Training Methods"
+ no_war_on_us: "No war on us"
  
 #NEWS EVENTS
  
@@ -138,6 +139,9 @@ TQS_placatetherebals_desc:0 "Many would rather crush a rebellion ruthlessly and 
  twiquestria.22.t:0 "Twilight Takes Canterlot"
  twiquestria.22.d:0 "After an immense battle against her former teacher in the skies above Equestria’s capital, Princess Twilight Sparkle and her Pro-Harmonic forces has successfully dispelled Empress Daybreaker and the Solar Empire from the city of Canterlot, who have now disappeared into the surrounding area in an hasty escape, but not before destroying as much of the city as they could. While some more devoted citizens to the Solar Empress have begun to stirrup unrest whenever they can, the majority of the Canterlot’s population has welcomed Princess Twilight with open hooves and even the remains of the Canterlot nobility offered to host a extravagant festival in honor of Twilight, grateful to be free from the tyranny of Daybreaker. While touched, Twilight replied that such a celebration currently would be a waste of supplies that could be used to continue the war effort and the reconstruction effort afterwards. In the morning, Princess Twilight held a speech infront of Canterlot Castle before a crowd, expressing that, while she was devastated to see her former home in such a condition, is overjoyed that Solar tyranny has been removed from the beating heart of Equestria and promises that Canterlot will be restored its former glory once the tyrants Daybreaker and Nightmare Moon are brought to justice. Continuing on, she warns everypony to remain vigilant, in order to ensure that Canterlot never falls once again. While her words ring true for many, others believe that the war has now been decided. While Empress Daybreaker is still out there and determined to oppose both Twilight and Nightmare Moon, the lost of Daybreaker’s most vital city could prove to be the straw that breaks the morale of her Imperial soldiers. Unless Canterlot is recovered soon, Daybreaker may not have any soldiers to continue the war with."
  twiquestria.22.a:0 "FUCK!"
+ twiquestria.25.t: "The South Joins Us"
+ twiquestria.25.d: "The Confederate states have decided to join us."
+ twiquestria.25.a: "Great!"
  
  #########Escaping Canterlot############
  
