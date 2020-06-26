@@ -1,0 +1,280 @@
+country_event = {
+	id = solarempire.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event solarempire.5"}
+	title = solarempire.5.t
+	desc = { text = solarempire.5.d_1
+		trigger = { FROM = { has_country_flag = nlr_early_discovery } }
+	}
+	desc = { text = solarempire.5.d_2
+		trigger = { FROM = { NOT = { has_country_flag = nlr_early_discovery } } }
+	}
+	picture = GFX_event_night_riders
+
+	is_triggered_only = yes
+
+	option = { #Support celestia
+		name = solarempire.5.a
+		reverse_add_opinion_modifier = { target = NLR modifier = cry_betrayal }
+		if = {
+			limit = { original_tag = CRY NOT = { has_completed_focus = CRY_subordination }  }
+			end_puppet_this = yes
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+		}
+		effect_tooltip = {
+			add_to_war_EQS_against_NLR = yes
+		}
+		hidden_effect = {
+			country_event = { id = equestria.166 days = 1 }
+		}
+		hidden_effect = {
+			if = {
+				limit = { is_subject = yes is_ai = no }
+				set_rule = { can_decline_call_to_war = no }
+			}
+			set_country_flag = supported_EQS
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				original_tag = CRY
+				has_completed_focus = CRY_eqs_strengthen_ties
+				factor = 1.5
+			}
+			modifier = {
+				original_tag = CRY
+				has_completed_focus = CRY_deep_integration
+				factor = 2
+			}
+			modifier = {
+				OR = {
+					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX 
+					has_game_rule = {
+						rule = EQS_ai_behavior
+						option = LUNAR_CIVIL_WAR_MAX
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	option = { #Stay neutral
+		name = solarempire.5.b
+		trigger = {
+			OR = {
+				NOT = { original_tag = EQC }
+				NOT = { has_completed_focus = EQC_strengthen_equestrian_ties }
+			}
+		}
+		end_puppet_this = yes
+		if = {
+			limit = { is_in_faction_with = event_target:equestria }
+			leave_faction = yes
+		}
+		reverse_add_opinion_modifier = { target = NLR modifier = cry_betrayal }
+		reverse_add_opinion_modifier = { target = event_target:equestria modifier = cry_betrayal }
+		hidden_effect = {
+			if = {
+				limit = { has_war_with = NLR }
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = NLR
+			}
+			set_country_flag = ignored_EQS_civil_war
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+		}
+		ai_chance = {
+			base = 4
+			modifier = {
+				NOT = { is_pony_race = yes }
+				factor = 3
+			}
+			modifier = {
+				is_major = yes
+				factor = 6
+			}
+			modifier = {
+				original_tag = EQC
+				has_completed_focus = EQC_patriation
+				factor = 100
+			}
+			modifier = {
+				NOT = {
+					is_neighbor_of = event_target:equestria
+					is_neighbor_of = NLR
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX 
+					has_game_rule = {
+						rule = EQS_ai_behavior
+						option = LUNAR_CIVIL_WAR_MAX
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	option = { #Support NMM
+		name = solarempire.5.c
+		if = {
+			limit = { is_subject_of = event_target:equestria }
+			get_current_autonomy_level = yes
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+			set_country_flag = supported_NLR
+			end_puppet_this = yes
+		}
+		if = {
+			limit = { is_in_faction_with = event_target:equestria }
+			leave_faction = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_war_with = NLR }
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = NLR
+			}
+		}
+		reverse_add_opinion_modifier = { target = event_target:equestria modifier = cry_betrayal }
+		add_popularity = { ideology = democratic popularity = -0.1 }
+		effect_tooltip = {
+			add_to_war_NLR_against_EQS = yes
+		}
+		hidden_effect = {
+			country_event = { id = equestria.167 days = 1 }
+		}
+		if = {
+			limit = {
+				original_tag = EQC
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				NLR = { set_autonomy = { target = ROOT autonomy_state = autonomy_satellite } }
+				else = {
+					NLR = { puppet = ROOT }
+				}
+			}
+			load_focus_tree = eqc_nlr_focus
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Jet Set"
+				desc = "snooty_noble_desc"
+				picture = "JetSet.tga"
+				expire = "1965.1.1"
+				ideology = moderatism
+				id = 700 #Jet Set
+				traits = {
+					democratic_sympathies
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_party_name = { ideology = neutrality long_name = EQC_bat_supporters name = EQC_bat_supporters }
+			country_event = { id = mareland.44 days = 1 }
+			add_stability = -0.2
+			add_war_support = -0.2
+		}
+		if = {
+			limit = {
+				original_tag = CRY
+			}
+			NLR = {
+				add_to_faction = CRY
+			}
+		}
+
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 10
+				has_government = fascism
+			}
+		}
+	}
+	option = { #Support Twi
+		name = solarempire.5.d
+		if = {
+			limit = { is_subject_of = event_target:equestria }
+			get_current_autonomy_level = yes
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+			set_country_flag = supported_NLR
+			end_puppet_this = yes
+		}
+		if = {
+			limit = { is_in_faction_with = event_target:equestria }
+			leave_faction = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_war_with = TQS }
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = TQS
+			}
+		}
+		reverse_add_opinion_modifier = { target = NLR modifier = cry_betrayal }
+		reverse_add_opinion_modifier = { target = event_target:equestria modifier = cry_betrayal }
+		hidden_effect = {
+			if = {
+				limit = { has_war_with = NLR }
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = NLR
+			}
+			set_country_flag = helped_twilight_civil_war
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+		}
+		effect_tooltip = {
+			add_to_war_TQS_against_EQS = yes
+			add_to_war_TQS_against_NLR = yes
+		}
+		if = {
+			limit = {
+				original_tag = EQC
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				NLR = { set_autonomy = { target = ROOT autonomy_state = autonomy_satellite } }
+				else = {
+					NLR = { puppet = ROOT }
+				}
+			}
+		}
+		if = {
+			limit = {
+				original_tag = CRY
+			}
+			TQS = {
+				create_faction = "Twi defence"
+				add_to_faction = CRY
+			}
+		}
+
+		ai_chance = {
+			factor = 75
+		}
+	}
+}
