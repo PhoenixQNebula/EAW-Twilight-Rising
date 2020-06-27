@@ -65,8 +65,26 @@ country_event = { #swap to twilight’s nation
 						type = annex_everything
 					}
 				}
+				TQS = { 
+					add_ideas = unstable_rule
+					add_ideas = proper_science_base
+					add_ideas = modern_society
+					add_ideas = tqs_civil_war_devistation
+					add_ideas = tqs_civil_war
+					load_oob = TQS_ponyville
+				}
+				EQS = { 
+					inherit_technology = TQS
+					add_ideas = tqs_civil_war_devistation
+					remove_ideas = eqs_civil_war
+					add_ideas = tqs_civil_war
+					}
+				NLR = { 
+					add_ideas = tqs_civil_war_devistation 
+					remove_ideas = eqs_civil_war
+					add_ideas = tqs_civil_war
+				}
 			}
-			
     }
 
     option = { #swap
@@ -138,32 +156,6 @@ country_event = { #Twilight's Speach
 				Random = 72
 				}
 				add_ideas = TQS_friends_in_arms
-			}
-			CRY = {
-				country_event = {
-					id = crystalempire.1
-					if = {
-						limit = {
-							OR ={
-								NOT = { is_in_faction_with = EQS }
-								NOT = { is_in_faction_with = NLR }
-							}
-						}
-					}
-					Days = 10
-				}
-				country_event = {
-					id = crystalempire.2
-					if = {
-						limit = {
-							OR = {
-								is_in_faction_with = EQS
-								is_in_faction_with = NLR
-							}
-						}
-					}
-					Days = 10
-				}
 			}
 		}	
 	}
