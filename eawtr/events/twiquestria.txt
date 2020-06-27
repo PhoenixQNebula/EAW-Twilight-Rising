@@ -65,8 +65,26 @@ country_event = { #swap to twilight’s nation
 						type = annex_everything
 					}
 				}
+				TQS = { 
+					add_ideas = unstable_rule
+					add_ideas = proper_science_base
+					add_ideas = modern_society
+					add_ideas = tqs_civil_war_devistation
+					add_ideas = tqs_civil_war
+					load_oob = TQS_ponyville
+				}
+				EQS = { 
+					inherit_technology = TQS
+					add_ideas = tqs_civil_war_devistation
+					remove_ideas = eqs_civil_war
+					add_ideas = tqs_civil_war
+					}
+				NLR = { 
+					add_ideas = tqs_civil_war_devistation 
+					remove_ideas = eqs_civil_war
+					add_ideas = tqs_civil_war
+				}
 			}
-			
     }
 
     option = { #swap
@@ -773,18 +791,6 @@ country_event = { #swaps some army leaders
     option = {
 		name = twiquestria.261.a
 		TQS = {
-			create_field_marshal = {
-				name = "Prince Blueblood"
-				portrait_path = "gfx/leaders/EQS/Blueblood.tga"
-				traits = { pony_race_trait equestrian_prince media_personality inflexible_strategist politically_connected }
-				skill = 2
-				id = 100
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 2
-				desc = EQS_arrogant_cunt_desc
-			}
 			create_corps_commander = {
 				name = "Soarin"
 				portrait_path = "gfx/leaders/EQS/Soarin.tga"
@@ -824,7 +830,6 @@ country_event = { #swaps some army leaders
 		}
 		set_global_flag = twi_swap_generals
 		EQS = { 
-			remove_unit_leader = 1
 			remove_unit_leader = 2
 			remove_unit_leader = 3
 			remove_unit_leader = 4
