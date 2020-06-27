@@ -22,9 +22,11 @@ country_event = { #Cadance chose to be neutral
 			enemy = NLR
 			hostility_reason = asked_to_join
 		}
+		ai_will_do = { base = 90 }
 	}
 	option = { #Stay neutral
 		name = crystalempire.1.b
+		ai_will_do = { base = 10 }
 	}
 }
 country_event = { #Cadance chose NLR or EQS
@@ -49,10 +51,11 @@ country_event = { #Cadance chose NLR or EQS
 			enemy = NLR
 			hostility_reason = asked_to_join
 		}
+		ai_will_do = { base = 75 }
 	}
 	option = { #Stay
 		name = crystalempire.2.b
-	
+		ai_will_do = { base = 20 }
 	}
 	option = { #Become Neutral
 		name = crystalempire.2.c
@@ -61,5 +64,6 @@ country_event = { #Cadance chose NLR or EQS
 		white_peace = NLR
 		leave_faction = yes
 		end_puppet = CRY
+		ai_will_do = { base = 5 }
 	}
 }
