@@ -14,7 +14,7 @@ country_event = { #Cadance chose to be neutral
 		name = crystalempire.1.a
 		add_to_war = { 
 			targeted_alliance = TQS 
-			enemy = EGS
+			enemy = EQS
 			hostility_reason = asked_to_join
 		}
 		add_to_war = { 
