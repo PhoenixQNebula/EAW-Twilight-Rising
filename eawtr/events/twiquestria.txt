@@ -39,6 +39,7 @@ country_event = { #spawns twilight’s nation
 		TQS = {add_ideas = no_war_on_us }
 		EQS = { country_event = { id = twiquestria.2 }}
 		NLR = { country_event = { id = twiquestria.2 }}
+		CRY = { country_event = { id = solarempire.5 }}
 	}
 }
 
