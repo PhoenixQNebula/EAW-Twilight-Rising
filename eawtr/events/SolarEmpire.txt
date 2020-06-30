@@ -12,9 +12,9 @@ country_event = {
 	picture = GFX_event_night_riders
 	
 	trigger = {
-		TQS = {exists = yes}
+		TQS  = {exists = yes}
 	}
-	is_triggered_only = no
+	is_triggered_only = yes
 
 	option = { #Support celestia
 		name = solarempire.5.a
