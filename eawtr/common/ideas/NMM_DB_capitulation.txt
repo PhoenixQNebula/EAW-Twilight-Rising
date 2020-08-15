@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+		ten_cap_improve = {
+
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.1
+			}
+		}
+		twenty_cap_improve = {
+
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.3
+			}
+		}
+		fourty_cap_improve = {
+
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.2
+				army_attack_factor = 0.1
+			}
+		}
+		eighty_cap_improve = {
+
+			#picture = 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.1
+				army_attack_factor = 0.25
+			}
+		}
+	}
+}

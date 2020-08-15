@@ -1,0 +1,178 @@
+﻿
+add_namespace = NMMCap
+
+	country_event = {
+		id = NMMCap.1
+		title = NMMCap.1.t
+		desc = NMMCap.1.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = NLR
+			AND = {
+				surrender_progress > 0.09
+				surrender_progress < 0.11
+			}
+		}
+		
+		option = {
+			name = NMMCap.1.a
+			NLR = {add_ideas = ten_cap_improve}
+			NLR = {remove_ideas = twenty_cap_improve}
+		}
+	}
+	country_event = {
+		id = NMMCap.2
+		title = NMMCap.2.t
+		desc = NMMCap.2.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = NLR
+			AND = {
+				surrender_progress > 0.19
+				surrender_progress < 0.21
+			}
+		}
+		
+		option = {
+			name = NMMCap.2.a
+			NLR = {remove_ideas = ten_cap_improve}
+			NLR = {add_ideas = twenty_cap_improve}
+			NLR = {remove_ideas = fourty_cap_improve}
+		}
+	}
+	country_event = {
+		id = NMMCap.3
+		title = NMMCap.3.t
+		desc = NMMCap.3.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = NLR
+			AND = {
+				surrender_progress > 0.39
+				surrender_progress < 0.41
+			}
+		}
+		
+		option = {
+			name = NMMCap.3.a
+			NLR = {remove_ideas = twenty_cap_improve}
+			NLR = {add_ideas = fourty_cap_improve}
+			NLR = {remove_ideas = eighty_cap_improve}
+		}
+	}
+	country_event = {
+		id = NMMCap.4
+		title = NMMCap.4.t
+		desc = NMMCap.4.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = NLR
+			AND = {
+				surrender_progress > 0.79
+				surrender_progress < 0.81
+			}
+		}
+		
+		option = {
+			name = NMMCap.4.a
+			NLR = {remove_ideas = fourty_cap_improve}
+			NLR = {add_ideas = eighty_cap_improve}
+		}
+	}
+	
+add_namespace = DBCap
+
+	country_event = {
+		id = DBCap.1
+		title = DBCap.1.t
+		desc = DBCap.1.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = EQS
+			AND = {
+				surrender_progress > 0.09
+				surrender_progress < 0.11
+			}
+		}
+		
+		option = {
+			name = DBCap.1.a
+			EQS = {add_ideas = ten_cap_improve}
+			EQS = {remove_ideas = twenty_cap_improve}
+		}
+	}
+	country_event = {
+		id = DBCap.2
+		title = DBCap.2.t
+		desc = DBCap.2.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = EQS
+			AND = {
+				surrender_progress > 0.19
+				surrender_progress < 0.21
+			}
+		}
+		
+		option = {
+			name = DBCap.2.a
+			EQS = {remove_ideas = ten_cap_improve}
+			EQS = {add_ideas = twenty_cap_improve}
+			EQS = {remove_ideas = fourty_cap_improve}
+		}
+	}
+	country_event = {
+		id = DBCap.3
+		title = DBCap.3.t
+		desc = DBCap.3.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = EQS
+			AND = {
+				surrender_progress > 0.39
+				surrender_progress < 0.41
+			}
+		}
+		
+		option = {
+			name = DBCap.3.a
+			EQS = {remove_ideas = twenty_cap_improve}
+			EQS = {add_ideas = fourty_cap_improve}
+			EQS = {remove_ideas = eighty_cap_improve}
+		}
+	}
+	country_event = {
+		id = DBCap.4
+		title = DBCap.4.t
+		desc = DBCap.4.d
+		#picture = gfx_news_canterlot
+		is_triggered_only = yes
+		
+		trigger = {
+			tag = EQS
+			AND = {
+				surrender_progress > 0.79
+				surrender_progress < 0.81
+			}
+		}
+		
+		option = {
+			name = DBCap.4.a
+			EQS = {remove_ideas = fourty_cap_improve}
+			EQS = {add_ideas = eighty_cap_improve}
+		}
+	}
