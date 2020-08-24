@@ -76,8 +76,8 @@ add_namespace = NMMCap
 		trigger = {
 			tag = NLR
 			AND = {
-				surrender_progress > 0.79
-				surrender_progress < 0.81
+				surrender_progress > 0.69
+				surrender_progress < 0.71
 			}
 		}
 		
@@ -165,8 +165,8 @@ add_namespace = DBCap
 		trigger = {
 			tag = EQS
 			AND = {
-				surrender_progress > 0.79
-				surrender_progress < 0.81
+				surrender_progress > 0.69
+				surrender_progress < 0.71
 			}
 		}
 		
