@@ -1,0 +1,69 @@
+add_namespace = crystalempire
+
+country_event = { #Cadance chose to be neutral
+	id = crystalempire.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event crystalempire.1"}
+	title = crystalempire.1.t
+	desc =  text = crystalempire.1.d
+	
+	picture = GFX_event_night_riders
+
+	is_triggered_only = yes
+
+	option = { #Support Twilight
+		name = crystalempire.1.a
+		add_to_war = { 
+			targeted_alliance = TQS 
+			enemy = EQS
+			hostility_reason = asked_to_join
+		}
+		add_to_war = { 
+			targeted_alliance = TQS 
+			enemy = NLR
+			hostility_reason = asked_to_join
+		}
+		ai_will_do = { base = 90 }
+	}
+	option = { #Stay neutral
+		name = crystalempire.1.b
+		ai_will_do = { base = 10 }
+	}
+}
+country_event = { #Cadance chose NLR or EQS
+	id = crystalempire.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event crystalempire.1"}
+	title = crystalempire.1.t
+	desc =  text = crystalempire.1.d
+	
+	picture = GFX_event_night_riders
+
+	is_triggered_only = yes
+
+	option = { #Support Twilight
+		name = crystalempire.2.a
+		add_to_war = { 
+			targeted_alliance = TQS 
+			enemy = EGS
+			hostility_reason = asked_to_join
+		}
+		add_to_war = { 
+			targeted_alliance = TQS 
+			enemy = NLR
+			hostility_reason = asked_to_join
+		}
+		ai_will_do = { base = 75 }
+	}
+	option = { #Stay
+		name = crystalempire.2.b
+		ai_will_do = { base = 20 }
+	}
+	option = { #Become Neutral
+		name = crystalempire.2.c
+		white_peace = TQS
+		white_peace = EQS
+		white_peace = NLR
+		leave_faction = yes
+		end_puppet = CRY
+		ai_will_do = { base = 5 }
+	}
+}

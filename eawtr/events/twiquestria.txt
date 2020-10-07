@@ -157,6 +157,32 @@ country_event = { #Twilight's Speach
 				}
 				add_ideas = TQS_friends_in_arms
 			}
+			CRY = {
+				country_event = {
+					id = crystalempire.1
+					if = {
+						limit = {
+							OR ={
+								NOT = { is_in_faction_with = EQS }
+								NOT = { is_in_faction_with = NLR }
+							}
+						}
+					}
+					Days = 10
+				}
+				country_event = {
+					id = crystalempire.2
+					if = {
+						limit = {
+							OR = {
+								is_in_faction_with = EQS
+								is_in_faction_with = NLR
+							}
+						}
+					}
+					Days = 10
+				}
+			}
 		}	
 	}
 }
