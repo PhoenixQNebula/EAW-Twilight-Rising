@@ -14,7 +14,7 @@
 	}
 	
 	support = {
-		military_police = { x = 0 y = 0 }
+		Artillery = { x = 0 y = 0 }
 	}
 }
 

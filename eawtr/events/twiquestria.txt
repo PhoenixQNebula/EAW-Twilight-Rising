@@ -17,6 +17,10 @@ country_event = { #spawns twilight’s nation
 			transfer_state = 2
 			transfer_state = 5
 			transfer_state = 68
+			add_state_core = 1
+			add_state_core = 2
+			add_state_core = 5
+			add_state_core = 68
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 1000
@@ -66,6 +70,7 @@ country_event = { #swap to twilight’s nation
 					}
 				}
 				TQS = { 
+					inherit_technology = EQS
 					add_ideas = unstable_rule
 					add_ideas = proper_science_base
 					add_ideas = modern_society
@@ -74,7 +79,6 @@ country_event = { #swap to twilight’s nation
 					load_oob = TQS_ponyville
 				}
 				EQS = { 
-					inherit_technology = TQS
 					add_ideas = tqs_civil_war_devistation
 					remove_ideas = eqs_civil_war
 					add_ideas = tqs_civil_war
@@ -107,6 +111,7 @@ country_event = { #swap to twilight’s nation
 				}
 			}
 			TQS = { 
+				inherit_technology = EQS
 				add_ideas = unstable_rule
 				add_ideas = proper_science_base
 				add_ideas = modern_society
@@ -155,6 +160,7 @@ country_event = { #Twilight's Speach
 				Days = 8
 				Random = 72
 				}
+				add_timed_idea = { idea = establish_front_line days = 100 }
 				add_ideas = TQS_friends_in_arms
 			}
 		}	
@@ -184,7 +190,6 @@ country_event = { #west-central equestria sides with Twilight
 				transfer_state = 119
 				transfer_state = 121
 				transfer_state = 123
-				
 			}
 			hidden_effect = {
 				EQS = {
@@ -213,21 +218,21 @@ country_event = { #west-central equestria sides with Twilight
 					amount = 500
 					producer = EQS
 					}
+					load_oob = TQS_west-central
+					add_state_core = 38
+					add_state_core = 41
+					add_state_core = 87
+					add_state_core = 94
+					add_state_core = 95
+					add_state_core = 99
+					add_state_core = 101
+					add_state_core = 114
+					add_state_core = 117
+					add_state_core = 118
+					add_state_core = 119
+					add_state_core = 121
+					add_state_core = 123
 				}
-			load_oob = TQS_west-central
-			add_state_core = 38
-			add_state_core = 41
-			add_state_core = 87
-			add_state_core = 94
-			add_state_core = 95
-			add_state_core = 99
-			add_state_core = 101
-			add_state_core = 114
-			add_state_core = 117
-			add_state_core = 118
-			add_state_core = 119
-			add_state_core = 121
-			add_state_core = 123
 			}
 	}
 }
@@ -284,6 +289,21 @@ country_event = { #east-central equestria sides with Twilight
 					amount = 300
 					producer = EQS
 					}
+					add_state_core = 29
+					add_state_core = 63
+					add_state_core = 65
+					add_state_core = 84
+					add_state_core = 97
+					add_state_core = 106
+					add_state_core = 109
+					add_state_core = 111
+					add_state_core = 112
+					add_state_core = 113
+					add_state_core = 115
+					add_state_core = 116
+					add_state_core = 120
+					add_state_core = 122
+					add_state_core = 327
 				}
 			}
 	}
